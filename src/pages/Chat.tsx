@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -30,7 +29,13 @@ const Chat = () => {
       // Load existing chat history
       const chatHistory = localStorage.getItem('chatHistory');
       if (chatHistory) {
-        setMessages(JSON.parse(chatHistory));
+        const parsedMessages = JSON.parse(chatHistory);
+        // Convert timestamp strings back to Date objects
+        const messagesWithDates = parsedMessages.map((msg: any) => ({
+          ...msg,
+          timestamp: new Date(msg.timestamp)
+        }));
+        setMessages(messagesWithDates);
       } else {
         // Welcome message
         setMessages([{

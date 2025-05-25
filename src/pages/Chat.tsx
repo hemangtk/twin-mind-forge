@@ -103,7 +103,7 @@ const Chat = () => {
       const profile = JSON.parse(localStorage.getItem("personalityProfile") || "{}");
 
 try {
-  const response = await fetch(`${import.meta.env.REACT_APP_BACKEND_URL}/api/chat` {
+  const response = await fetch(`${import.meta.env.REACT_APP_BACKEND_URL}/api/chat` ,{
     method: "POST",
     headers: {
       "Content-Type": "application/json",

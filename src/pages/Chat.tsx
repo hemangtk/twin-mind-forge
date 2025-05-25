@@ -31,7 +31,7 @@ const Chat = () => {
       setHasProfile(true);
 
       // fetch chat history from backend
-      fetch(`http://localhost:3001/api/chat/${profile.id}`)
+      fetch(`${import.meta.env.REACT_APP_BACKEND_URL}/api/chat/${profile.id}`)
         .then(res => res.json())
         .then(data => {
           if (data.success && Array.isArray(data.messages)) {
@@ -103,7 +103,7 @@ const Chat = () => {
       const profile = JSON.parse(localStorage.getItem("personalityProfile") || "{}");
 
 try {
-  const response = await fetch("http://localhost:3001/api/chat", {
+  const response = await fetch(`${import.meta.env.REACT_APP_BACKEND_URL}/api/chat` {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

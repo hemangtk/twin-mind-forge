@@ -5,11 +5,12 @@ const {
   getPersonalityProfile,
   saveChatMessage,
   getChatHistory,
-  clearChatHistory
+  clearChatHistory,
+  updatePersonalityProfile
 } = require('../utils/memory');
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-
+let extractedFacts = {};
 router.post('/', async (req, res) => {
   try {
     const { profileId, message } = req.body;
@@ -34,6 +35,40 @@ router.post('/', async (req, res) => {
       sender: 'user'
     };
     await saveChatMessage(profileId, userMessage);
+
+    try {
+    console.log("🧠 Extracting personality facts...");
+
+    const factPrompt = `From this message, extract any personal facts (like favorite food, hobbies, dislikes, goals, etc.) as a flat JSON object. Keep it short. Return {} if nothing is found.\n\nMessage: "${message}"`;
+
+    const result = await model.generateContent([factPrompt]);
+
+    if (!result || !result.response) throw new Error("No Gemini fact response");
+
+    const response = await result.response;
+    const rawText = typeof response.text === 'function' ? await response.text() : response.text;
+    console.log("📥 Raw Gemini fact output:", rawText);
+
+    const cleaned = rawText.replace(/```json/i, '').replace(/```/g, '').trim();
+
+    // let extractedFacts = {};
+    try {
+      extractedFacts = JSON.parse(cleaned);
+      console.log("✅ Parsed extracted facts:", extractedFacts);
+    } catch (e) {
+      console.warn("⚠️ Could not parse Gemini response:", e.message);
+    }
+
+    if (Object.keys(extractedFacts).length > 0) {
+      await updatePersonalityProfile(profileId, extractedFacts);
+      console.log("🧠 Profile updated with new facts:", extractedFacts);
+    } else {
+      console.log("ℹ️ No new personal facts found.");
+    }
+  } catch (factError) {
+    console.error("❌ Fact extraction error:", factError.message);
+  }
+
 
     const personalityContext = Object.entries(profile.answers)
       .map(([key, val]) => `${key}: ${val}`)
@@ -64,6 +99,9 @@ try {
   }
 
   botResponse = text?.trim() || "Sorry, I didn’t quite get that.";
+
+  
+
   console.log("💬 Gemini replied:", botResponse);
 } catch (err) {
   console.error("❌ Gemini crash caught:", err.stack || err.message);

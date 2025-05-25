@@ -807,6 +807,150 @@
       "text": "Hey, what's up?",
       "sender": "bot",
       "timestamp": "2025-05-25T08:34:04.264Z"
+    },
+    {
+      "id": "1748162408748",
+      "text": "I love biryani and my favorite movie is 3 Idiots.",
+      "sender": "user",
+      "timestamp": "2025-05-25T08:40:08.749Z"
+    },
+    {
+      "id": "1748162411083",
+      "text": "Aight, biryani is the bomb, and 3 Idiots rocks!",
+      "sender": "bot",
+      "timestamp": "2025-05-25T08:40:11.083Z"
+    },
+    {
+      "id": "1748162430323",
+      "text": "whats my favorite food",
+      "sender": "user",
+      "timestamp": "2025-05-25T08:40:30.324Z"
+    },
+    {
+      "id": "1748162432328",
+      "text": "Main Nahin bolunga. Reply kar sakte.",
+      "sender": "bot",
+      "timestamp": "2025-05-25T08:40:32.328Z"
+    },
+    {
+      "id": "1748162468521",
+      "text": "whats my favorite movie",
+      "sender": "user",
+      "timestamp": "2025-05-25T08:41:08.524Z"
+    },
+    {
+      "id": "1748162470648",
+      "text": "Main Nahin bolunga.",
+      "sender": "bot",
+      "timestamp": "2025-05-25T08:41:10.648Z"
+    },
+    {
+      "id": "1748162689466",
+      "text": "hello",
+      "sender": "user",
+      "timestamp": "2025-05-25T08:44:49.467Z"
+    },
+    {
+      "id": "1748162691859",
+      "text": "Hmm... I'm having trouble replying right now.",
+      "sender": "bot",
+      "timestamp": "2025-05-25T08:44:51.860Z"
+    },
+    {
+      "id": "1748162699438",
+      "text": "hello",
+      "sender": "user",
+      "timestamp": "2025-05-25T08:44:59.441Z"
+    },
+    {
+      "id": "1748162701947",
+      "text": "Hmm... I'm having trouble replying right now.",
+      "sender": "bot",
+      "timestamp": "2025-05-25T08:45:01.947Z"
+    },
+    {
+      "id": "1748162711049",
+      "text": "hello",
+      "sender": "user",
+      "timestamp": "2025-05-25T08:45:11.050Z"
+    },
+    {
+      "id": "1748162714325",
+      "text": "hello how are you",
+      "sender": "bot",
+      "timestamp": "2025-05-25T08:45:14.325Z"
+    },
+    {
+      "id": "1748163039546",
+      "text": "hello",
+      "sender": "user",
+      "timestamp": "2025-05-25T08:50:39.548Z"
+    },
+    {
+      "id": "1748163042660",
+      "text": "hello how are you",
+      "sender": "bot",
+      "timestamp": "2025-05-25T08:50:42.660Z"
+    },
+    {
+      "id": "1748163051400",
+      "text": "my favorite food is biryani",
+      "sender": "user",
+      "timestamp": "2025-05-25T08:50:51.402Z"
+    },
+    {
+      "id": "1748163053538",
+      "text": "Arey wah! Biryani... *meri bhi!*",
+      "sender": "bot",
+      "timestamp": "2025-05-25T08:50:53.538Z"
+    },
+    {
+      "id": "1748163061062",
+      "text": "whats my fav food",
+      "sender": "user",
+      "timestamp": "2025-05-25T08:51:01.063Z"
+    },
+    {
+      "id": "1748163063665",
+      "text": "Main Nahin bolunga. You gonna guess! 😉",
+      "sender": "bot",
+      "timestamp": "2025-05-25T08:51:03.665Z"
+    },
+    {
+      "id": "1748163299769",
+      "text": "hello",
+      "sender": "user",
+      "timestamp": "2025-05-25T08:54:59.771Z"
+    },
+    {
+      "id": "1748163302015",
+      "text": "Hello how are you",
+      "sender": "bot",
+      "timestamp": "2025-05-25T08:55:02.016Z"
+    },
+    {
+      "id": "1748163310610",
+      "text": "i love biryani its my fav food",
+      "sender": "user",
+      "timestamp": "2025-05-25T08:55:10.611Z"
+    },
+    {
+      "id": "1748163313172",
+      "text": "Yeah, biryani rocks! That stuff is seriously my fav food too.",
+      "sender": "bot",
+      "timestamp": "2025-05-25T08:55:13.172Z"
+    },
+    {
+      "id": "1748163331792",
+      "text": "what is my fav food",
+      "sender": "user",
+      "timestamp": "2025-05-25T08:55:31.793Z"
+    },
+    {
+      "id": "1748163334285",
+      "text": "Okay cool! So, uh, biryani is your fav food. Like, duh! ;)",
+      "sender": "bot",
+      "timestamp": "2025-05-25T08:55:34.285Z"
     }
   ]
 }

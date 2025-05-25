@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Progress } from "@/components/ui/progress";
 import { ArrowLeft, ArrowRight, Brain, Mic, MicOff } from "lucide-react";
 import { toast } from "sonner";
+// const backendUrl = process.env.REACT_APP_BACKEND_URL;
 
 const personalityQuestions = [
   {
@@ -135,13 +136,14 @@ const Onboarding = () => {
         Object.entries(answers).map(([key, value]) => [`q${key}`, value])
       );
 
-      const response = await fetch(`${import.meta.env.REACT_APP_BACKEND_URL}/api/personality`, {
+     const response = await fetch(`http://16.171.8.239:3001/personality`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ answers: formattedAnswers })
       });
 
       console.log("Raw backend response:", response);
+      
       const data = await response.json();
       const profileToStore = {
         id: data.profileId,

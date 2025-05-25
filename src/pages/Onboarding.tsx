@@ -136,7 +136,7 @@ const Onboarding = () => {
         Object.entries(answers).map(([key, value]) => [`q${key}`, value])
       );
 
-     const response = await fetch(`http://16.171.8.239:3001/personality`, {
+     const response = await fetch(`http://16.171.8.239:3001/api/personality`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ answers: formattedAnswers })

@@ -1,0 +1,194 @@
+{
+  "1748132803577": [
+    {
+      "id": "1748132813828",
+      "text": "hey",
+      "sender": "user",
+      "timestamp": "2025-05-25T00:26:53.828Z"
+    }
+  ],
+  "1748132943234": [
+    {
+      "id": "1748132945518",
+      "text": "hi",
+      "sender": "user",
+      "timestamp": "2025-05-25T00:29:05.518Z"
+    },
+    {
+      "id": "1748133032557",
+      "text": "hu",
+      "sender": "user",
+      "timestamp": "2025-05-25T00:30:32.557Z"
+    },
+    {
+      "id": "1748133218839",
+      "text": "hi",
+      "sender": "user",
+      "timestamp": "2025-05-25T00:33:38.839Z"
+    },
+    {
+      "id": "1748133254114",
+      "text": "hi",
+      "sender": "user",
+      "timestamp": "2025-05-25T00:34:14.114Z"
+    },
+    {
+      "id": "1748133455697",
+      "text": "hello",
+      "sender": "user",
+      "timestamp": "2025-05-25T00:37:35.697Z"
+    },
+    {
+      "id": "1748133820337",
+      "text": "hello",
+      "sender": "user",
+      "timestamp": "2025-05-25T00:43:40.338Z"
+    },
+    {
+      "id": "1748133995921",
+      "text": "hello",
+      "sender": "user",
+      "timestamp": "2025-05-25T00:46:35.921Z"
+    },
+    {
+      "id": "1748134215472",
+      "text": "hello",
+      "sender": "user",
+      "timestamp": "2025-05-25T00:50:15.473Z"
+    },
+    {
+      "id": "1748134462239",
+      "text": "hello",
+      "sender": "user",
+      "timestamp": "2025-05-25T00:54:22.240Z"
+    },
+    {
+      "id": "1748134518176",
+      "text": "hello",
+      "sender": "user",
+      "timestamp": "2025-05-25T00:55:18.177Z"
+    },
+    {
+      "id": "1748134583569",
+      "text": "hello",
+      "sender": "user",
+      "timestamp": "2025-05-25T00:56:23.570Z"
+    },
+    {
+      "id": "1748135170573",
+      "text": "hello",
+      "sender": "user",
+      "timestamp": "2025-05-25T01:06:10.573Z"
+    },
+    {
+      "id": "1748135248243",
+      "text": "hello",
+      "sender": "user",
+      "timestamp": "2025-05-25T01:07:28.244Z"
+    },
+    {
+      "id": "1748135332436",
+      "text": "hello",
+      "sender": "user",
+      "timestamp": "2025-05-25T01:08:52.436Z"
+    },
+    {
+      "id": "1748135575968",
+      "text": "hello",
+      "sender": "user",
+      "timestamp": "2025-05-25T01:12:55.969Z"
+    },
+    {
+      "id": "1748135577910",
+      "text": "Sorry, I couldn’t generate a response right now.",
+      "sender": "bot",
+      "timestamp": "2025-05-25T01:12:57.909Z"
+    },
+    {
+      "id": "1748135929944",
+      "text": "hello",
+      "sender": "user",
+      "timestamp": "2025-05-25T01:18:49.945Z"
+    },
+    {
+      "id": "1748135931587",
+      "text": "Sorry, I couldn’t generate a response right now.",
+      "sender": "bot",
+      "timestamp": "2025-05-25T01:18:51.587Z"
+    },
+    {
+      "id": "1748135979377",
+      "text": "hello",
+      "sender": "user",
+      "timestamp": "2025-05-25T01:19:39.377Z"
+    },
+    {
+      "id": "1748135981539",
+      "text": "Hey!  So, what's the outcome we're aiming for here?  I'm kinda tired, been in my room all day – college student life, you know?  Sleep or chat – what's the plan?\n",
+      "sender": "bot",
+      "timestamp": "2025-05-25T01:19:41.539Z"
+    },
+    {
+      "id": "1748135991517",
+      "text": "hello",
+      "sender": "user",
+      "timestamp": "2025-05-25T01:19:51.518Z"
+    },
+    {
+      "id": "1748135993634",
+      "text": "Hey!  So, what's the outcome we're aiming for here?  I'm kinda tired, been sleeping a lot lately, college life, you know?  Unless there's some seriously awesome game to play...otherwise, I'm probably just gonna stay in my room.  Let's talk results!\n",
+      "sender": "bot",
+      "timestamp": "2025-05-25T01:19:53.634Z"
+    }
+  ],
+  "1748136457718": [
+    {
+      "id": "1748136472685",
+      "text": "hi",
+      "sender": "user",
+      "timestamp": "2025-05-25T01:27:52.685Z"
+    },
+    {
+      "id": "1748136474490",
+      "text": "wassup bro! kya hai?\n",
+      "sender": "bot",
+      "timestamp": "2025-05-25T01:27:54.490Z"
+    },
+    {
+      "id": "1748136517635",
+      "text": "what are you doing",
+      "sender": "user",
+      "timestamp": "2025-05-25T01:28:37.636Z"
+    },
+    {
+      "id": "1748136519602",
+      "text": "Yo dude, wassup?  Just chillin', basically.  What's the haal?  Kya hai?\n",
+      "sender": "bot",
+      "timestamp": "2025-05-25T01:28:39.602Z"
+    },
+    {
+      "id": "1748136555469",
+      "text": "am good bc",
+      "sender": "user",
+      "timestamp": "2025-05-25T01:29:15.470Z"
+    },
+    {
+      "id": "1748136557331",
+      "text": "Yo bro!  Am good too, BC! Whatsup? Kya hai?\n",
+      "sender": "bot",
+      "timestamp": "2025-05-25T01:29:17.330Z"
+    },
+    {
+      "id": "1748136574942",
+      "text": "am bored what to do now",
+      "sender": "user",
+      "timestamp": "2025-05-25T01:29:34.944Z"
+    },
+    {
+      "id": "1748136577372",
+      "text": "Bro, bored kya hai?  Whatsup?  Netflix and chill?  Bascially, I'm thinking basketball,  or maybe hit up some girls, you know?  Whatever's best for me,  mind over heart, you dig?  Unless I gotta study, then it's solo time, man.  But if it's a group project,  I'm all in.  Later I'll analyze the whole day anyway, so it's cool.  What's your plan, dude?\n",
+      "sender": "bot",
+      "timestamp": "2025-05-25T01:29:37.371Z"
+    }
+  ]
+}

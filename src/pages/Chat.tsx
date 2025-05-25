@@ -21,32 +21,36 @@ const Chat = () => {
   const [hasProfile, setHasProfile] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    // Check if user has completed onboarding
-    const profile = localStorage.getItem('personalityProfile');
-    if (profile) {
+ useEffect(() => {
+    const rawProfile = localStorage.getItem('personalityProfile');
+    console.log("Raw profile from localStorage:", rawProfile);
+
+    const profile = JSON.parse(rawProfile || '{}');
+
+    if (profile && profile.id) {
       setHasProfile(true);
-      // Load existing chat history
-      const chatHistory = localStorage.getItem('chatHistory');
-      if (chatHistory) {
-        const parsedMessages = JSON.parse(chatHistory);
-        // Convert timestamp strings back to Date objects
-        const messagesWithDates = parsedMessages.map((msg: any) => ({
-          ...msg,
-          timestamp: new Date(msg.timestamp)
-        }));
-        setMessages(messagesWithDates);
-      } else {
-        // Welcome message
-        setMessages([{
-          id: '1',
-          content: "Hi! I'm your AI personality twin. I've learned about you from your onboarding responses and I'm ready to chat in your style. What's on your mind?",
-          sender: 'bot',
-          timestamp: new Date()
-        }]);
-      }
+
+      // fetch chat history from backend
+      fetch(`http://localhost:3001/api/chat/${profile.id}`)
+        .then(res => res.json())
+        .then(data => {
+          if (data.success && Array.isArray(data.messages)) {
+            const messagesWithDates = data.messages.map((msg: any) => ({
+              ...msg,
+              timestamp: new Date(msg.timestamp)
+            }));
+            setMessages(messagesWithDates);
+          }
+        })
+        .catch(err => {
+          console.error("Failed to load chat history:", err);
+        });
+
+    } else {
+      setHasProfile(false);
     }
   }, []);
+
 
   useEffect(() => {
     // Save chat history to localStorage
@@ -60,26 +64,26 @@ const Chat = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages, isTyping]);
 
-  const generateBotResponse = async (userMessage: string): Promise<string> => {
-    // In a real app, this would call your backend API with Gemini integration
-    // For now, we'll simulate a personality-aware response
-    const profile = JSON.parse(localStorage.getItem('personalityProfile') || '{}');
+  // const generateBotResponse = async (userMessage: string): Promise<string> => {
+  //   // In a real app, this would call your backend API with Gemini integration
+  //   // For now, we'll simulate a personality-aware response
+  //   const profile = JSON.parse(localStorage.getItem('personalityProfile') || '{}');
     
-    // Simulate API delay
-    await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
+  //   // Simulate API delay
+  //   await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
     
-    // Simple personality-aware responses (in real app, this would be Gemini with custom prompt)
-    const responses = [
-      "That's interesting! Based on what I know about your communication style, I think you'd approach this by...",
-      "I can see why you'd think that way - it aligns with your decision-making preferences we discussed.",
-      "Your perspective reminds me of how you described handling challenges. Have you considered...",
-      "Given your learning style, you might find it helpful to...",
-      "That resonates with the values you shared with me. In my opinion...",
-    ];
+  //   // Simple personality-aware responses (in real app, this would be Gemini with custom prompt)
+  //   const responses = [
+  //     "That's interesting! Based on what I know about your communication style, I think you'd approach this by...",
+  //     "I can see why you'd think that way - it aligns with your decision-making preferences we discussed.",
+  //     "Your perspective reminds me of how you described handling challenges. Have you considered...",
+  //     "Given your learning style, you might find it helpful to...",
+  //     "That resonates with the values you shared with me. In my opinion...",
+  //   ];
     
-    return responses[Math.floor(Math.random() * responses.length)] + " " + 
-           "What do you think about taking a more structured approach to this?";
-  };
+  //   return responses[Math.floor(Math.random() * responses.length)] + " " + 
+  //          "What do you think about taking a more structured approach to this?";
+  // };
 
   const handleSendMessage = async () => {
     if (!inputValue.trim()) return;
@@ -96,16 +100,42 @@ const Chat = () => {
     setIsTyping(true);
 
     try {
-      const botResponse = await generateBotResponse(inputValue);
-      
-      const botMessage: Message = {
-        id: (Date.now() + 1).toString(),
-        content: botResponse,
-        sender: 'bot',
-        timestamp: new Date()
-      };
+      const profile = JSON.parse(localStorage.getItem("personalityProfile") || "{}");
 
-      setMessages(prev => [...prev, botMessage]);
+try {
+  const response = await fetch("http://localhost:3001/api/chat", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      profileId: profile.id,
+      message: inputValue,
+    }),
+  });
+
+  console.log("Chat API raw response:", response);
+
+  const data = await response.json();
+  console.log("Chat API data:", data);
+
+  if (!response.ok || !data.success) {
+    throw new Error(data.error || "Unknown error");
+  }
+
+  const botMessage: Message = {
+    id: (Date.now() + 1).toString(),
+    content: data.message.text,
+    sender: "bot",
+    timestamp: new Date(),
+  };
+
+  setMessages((prev) => [...prev, botMessage]);
+  } catch (error) {
+    console.error("Chat API failed:", error);
+    toast.error("Failed to get response. Please try again.");
+  }
+
     } catch (error) {
       toast.error("Failed to get response. Please try again.");
     } finally {

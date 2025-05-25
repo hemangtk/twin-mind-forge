@@ -89,31 +89,45 @@ const Onboarding = () => {
     }
   };
 
-  const handleSubmit = async () => {
-    setIsSubmitting(true);
-    
-    try {
-      // Save to localStorage for now (in full app, this would go to backend)
-      const personalityProfile = {
-        answers,
-        createdAt: new Date().toISOString(),
-        id: Math.random().toString(36).substr(2, 9)
-      };
-      
-      localStorage.setItem('personalityProfile', JSON.stringify(personalityProfile));
-      
-      toast.success("Personality profile created successfully!");
-      
-      // Simulate processing time
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      navigate("/chat");
-    } catch (error) {
-      toast.error("Failed to create profile. Please try again.");
-    } finally {
-      setIsSubmitting(false);
+const handleSubmit = async () => {
+  setIsSubmitting(true);
+
+  try {
+    const formattedAnswers = Object.fromEntries(
+      Object.entries(answers).map(([key, value]) => [`q${key}`, value])
+    );
+
+    const response = await fetch("http://localhost:3001/api/personality", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ answers: formattedAnswers })
+    });
+
+    console.log("Raw backend response:", response);
+    const data = await response.json();
+    const profileToStore = {
+      id: data.profileId,
+      answers: formattedAnswers
+    };
+    localStorage.setItem("personalityProfile", JSON.stringify(profileToStore));
+    console.log("Saved to localStorage:", profileToStore);
+
+    console.log("Parsed data:", data);
+
+    if (!response.ok || !data.success || !data.profileId) {
+      toast.error("Failed to save profile.");
+      return;
     }
-  };
+
+    navigate("/chat");
+  } catch (error) {
+    console.error("Error during profile submission:", error);
+    toast.error("Something went wrong.");
+  } finally {
+    setIsSubmitting(false);
+  }
+};
+
 
   const currentQuestionData = personalityQuestions[currentQuestion];
 

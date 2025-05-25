@@ -1,7 +1,8 @@
-
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
+
+// 🔁 Ensure both route files are exporting only the router function!
 const personalityRoutes = require('./routes/personality');
 const chatRoutes = require('./routes/chat');
 
@@ -11,6 +12,11 @@ const PORT = process.env.PORT || 3001;
 // Middleware
 app.use(cors());
 app.use(express.json());
+
+// Debug route check (optional)
+console.log("✅ Routes loaded:");
+console.log("👉 personalityRoutes:", typeof personalityRoutes); // should be 'function'
+console.log("👉 chatRoutes:", typeof chatRoutes); // should be 'function'
 
 // Routes
 app.use('/api/personality', personalityRoutes);

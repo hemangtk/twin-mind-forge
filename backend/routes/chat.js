@@ -8,15 +8,14 @@ const {
   clearChatHistory
 } = require('../utils/memory');
 
-// Initialize Gemini with your API key
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
-// POST /api/chat → handle a chat message
 router.post('/', async (req, res) => {
   try {
     const { profileId, message } = req.body;
-    console.log("📨 Incoming message:", message);
-    console.log("🔎 Profile ID:", profileId);
+
+    console.log("📨 Message received:", message);
+    console.log("🆔 Profile ID:", profileId);
 
     if (!profileId || !message) {
       return res.status(400).json({ error: 'Profile ID and message are required' });
@@ -27,7 +26,7 @@ router.post('/', async (req, res) => {
       return res.status(404).json({ error: 'Personality profile not found' });
     }
 
-    console.log("🧠 Using Gemini with profile:", profile.answers);
+    const model = genAI.getGenerativeModel({ model: "models/gemini-2.0-flash" });
 
     const userMessage = {
       id: Date.now().toString(),
@@ -40,20 +39,38 @@ router.post('/', async (req, res) => {
       .map(([key, val]) => `${key}: ${val}`)
       .join('\n');
 
-    const systemPrompt = `You are an AI personality twin that mimics the user's communication style and personality. Here's their personality profile:\n\n${personalityContext}\n\nBased on this profile, reply to the user’s message with their tone, style, and way of thinking.\n\nUser message: ${message}`;
+    const systemPrompt = `You are an AI personality twin that mimics the user's communication style and personality. Here's their personality profile:\n\n${personalityContext}\n\nUser message: ${message}`;
 
-    console.log("🧾 System prompt:\n", systemPrompt);
+    console.log("🧾 Sending to Gemini:\n", systemPrompt);
 
     let botResponse = "Sorry, I couldn’t generate a response right now.";
 
-    try {
-      const model = genAI.getGenerativeModel({ model: "models/gemini-2.0-flash" });
-      const result = await model.generateContent([systemPrompt]);
-      const response = await result.response;
-      botResponse = response.text();
-    } catch (geminiError) {
-      console.error("❌ Gemini error:", geminiError);
-    }
+try {
+  const result = await model.generateContent([systemPrompt]);
+
+  if (!result || !result.response) {
+    console.error("❌ No response from Gemini.");
+    throw new Error("No valid response from Gemini.");
+  }
+
+  const response = await result.response;
+
+  // Safely handle .text() whether it's async or not
+  let text;
+  if (typeof response.text === 'function') {
+    text = await response.text();
+  } else {
+    text = response.text || '';
+  }
+
+  botResponse = text?.trim() || "Sorry, I didn’t quite get that.";
+  console.log("💬 Gemini replied:", botResponse);
+} catch (err) {
+  console.error("❌ Gemini crash caught:", err.stack || err.message);
+  botResponse = "Hmm... I'm having trouble replying right now.";
+}
+
+
 
     const botMessage = {
       id: (Date.now() + 1).toString(),
@@ -64,13 +81,13 @@ router.post('/', async (req, res) => {
 
     res.json({ success: true, message: botMessage });
 
-  } catch (error) {
-    console.error('❌ Server error:', error);
-    res.status(500).json({ error: 'Failed to process message' });
+  } catch (err) {
+    console.error("🔥 Critical chat error:", err.stack || err.message);
+    res.status(500).json({ error: 'Failed to get response. Please try again later.' });
   }
 });
 
-// GET /api/chat/:profileId → get chat history
+// GET chat history
 router.get('/:profileId', async (req, res) => {
   try {
     const chatHistory = await getChatHistory(req.params.profileId);
@@ -81,7 +98,7 @@ router.get('/:profileId', async (req, res) => {
   }
 });
 
-// DELETE /api/chat/:profileId → clear chat history
+// DELETE chat history
 router.delete('/:profileId', async (req, res) => {
   try {
     await clearChatHistory(req.params.profileId);

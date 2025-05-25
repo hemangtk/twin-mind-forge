@@ -115,5 +115,45 @@
       "q7": "always keeping myself occupied trying to learn new things, siting in calm environemnts will proper seating and lighting with all tools for studying all the time like book stationaries, elecronics etc"
     },
     "createdAt": "2025-05-25T02:56:04.638Z"
+  },
+  {
+    "id": "1748154890305",
+    "answers": {
+      "q1": "i talk to people in a very kind a friendly way as i want my first impression to be the best one",
+      "q2": "while making decisions i see the efforts and the outcomes ratio",
+      "q3": "i generally talk to my mom or a friend , or just play bgmi and sleep ",
+      "q4": "i prefer learning practically - which makes me think and that makes me learn things faster and efficently ",
+      "q5": "i spend my free time generally sleeping , roaming out, or just play snooker at 5th floor of my hostel(which is a common area)",
+      "q6": "my father thought me to always be kind and respect girls and thats what keeps me driving",
+      "q7": "im a college student studying at bangalore from hyderbad - so generally its from room to class and class to room"
+    },
+    "createdAt": "2025-05-25T06:34:50.305Z"
+  },
+  {
+    "id": "1748155670127",
+    "answers": {
+      "q1": "i talk to people in a very kind a friendly way as i want my first impression to be the best one",
+      "q2": "while making decisions i see the efforts and the outcomes ratio",
+      "q3": "i generally talk to my mom or a friend , or just play bgmi and sleep \n\n",
+      "q4": "i prefer learning practically - which makes me think and that makes me learn things faster and efficently \n",
+      "q5": "i spend my free time generally sleeping , roaming out, or just play snooker at 5th floor of my hostel(which is a common area)\n",
+      "q6": "my father thought me to always be kind and respect girls and thats what keeps me driving",
+      "q7": "m a college student studying at bangalore from hyderbad - so generally its from room to class and class to room\n",
+      "favorite_food": "dosa"
+    },
+    "createdAt": "2025-05-25T06:47:50.127Z"
+  },
+  {
+    "id": "1748158954069",
+    "answers": {
+      "q1": "i talk to people in a very kind a friendly way as i want my first impression to be the best one",
+      "q2": "while making decisions i see the efforts and the outcomes ratio\n",
+      "q3": "i generally talk to my mom or a friend , or just play bgmi and sleep \n",
+      "q4": "i prefer learning practically - which makes me think and that makes me learn things faster and efficently \n",
+      "q5": "i spend my free time generally sleeping , roaming out, or just play snooker at 5th floor of my hostel(which is a common area)\n",
+      "q6": "my father thought me to always be kind and respect girls and thats what keeps me driving",
+      "q7": "im a college student studying at bangalore from hyderbad - so generally its from room to class and class to room\n"
+    },
+    "createdAt": "2025-05-25T07:42:34.069Z"
   }
 ]

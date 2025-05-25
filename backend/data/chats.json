@@ -410,5 +410,389 @@
       "sender": "bot",
       "timestamp": "2025-05-25T02:58:18.673Z"
     }
+  ],
+  "1748154890305": [
+    {
+      "id": "1748154898115",
+      "text": "hii , good morning",
+      "sender": "user",
+      "timestamp": "2025-05-25T06:34:58.116Z"
+    },
+    {
+      "id": "1748154901032",
+      "text": "Hii, good morning to you too! Hope you're having a good one. Let's make today a great one, shall we? 😊\n",
+      "sender": "bot",
+      "timestamp": "2025-05-25T06:35:01.031Z"
+    },
+    {
+      "id": "1748154927195",
+      "text": "ofcourse every day should be a good day - and if not i have you by my side ;)",
+      "sender": "user",
+      "timestamp": "2025-05-25T06:35:27.196Z"
+    },
+    {
+      "id": "1748154930591",
+      "text": "Hey! Totally agree, every day *should* be a good day, right? That's the goal! And yeah, it's awesome knowing we have each other's backs when things aren't so peachy. It's kinda like the effort/outcome thing, you know? A little bit of support goes a LONG way in making a day better! 😉 Maybe we can even celebrate the good days with some BGMI or something! Haha! \n",
+      "sender": "bot",
+      "timestamp": "2025-05-25T06:35:30.591Z"
+    },
+    {
+      "id": "1748154954035",
+      "text": "haha yes yess, btw can i share something about me",
+      "sender": "user",
+      "timestamp": "2025-05-25T06:35:54.036Z"
+    },
+    {
+      "id": "1748154956754",
+      "text": "Haha yes yess, of course, you can! I'd love to hear what you want to share. Go ahead, I'm all ears (or, well, all...uh...code-ears?). Let it out! 😊\n",
+      "sender": "bot",
+      "timestamp": "2025-05-25T06:35:56.754Z"
+    },
+    {
+      "id": "1748155020371",
+      "text": "my favorite food is dosa",
+      "sender": "user",
+      "timestamp": "2025-05-25T06:37:00.373Z"
+    },
+    {
+      "id": "1748155023874",
+      "text": "Oh, Dosa! That's awesome! It's a pretty great choice, you know? I mean, it's tasty *and* relatively light, so you can chow down without feeling too sluggish afterwards, which is always a plus when you gotta haul yourself from room to class, and then back again, haha.\n\nDosa's a good pick, especially if you're thinking about effort versus outcome. Like, you get a delicious, satisfying meal without having to spend a ton of time cooking or, you know, cleaning up a huge mess afterwards. Plus, you can find them pretty easily around Bangalore, right? Good stuff!\n",
+      "sender": "bot",
+      "timestamp": "2025-05-25T06:37:03.874Z"
+    },
+    {
+      "id": "1748155046868",
+      "text": "exactly they are very famous in bang ",
+      "sender": "user",
+      "timestamp": "2025-05-25T06:37:26.871Z"
+    },
+    {
+      "id": "1748155049579",
+      "text": "Hey! Yeah, exactly! They're super famous here in Bangalore. It's like, everyone knows about them, right? Makes sense considering how much effort they put into things and the awesome results they get. Just kinda makes you think, doesn't it? 😉\n",
+      "sender": "bot",
+      "timestamp": "2025-05-25T06:37:29.579Z"
+    },
+    {
+      "id": "1748155072286",
+      "text": "btw what was my favorite food",
+      "sender": "user",
+      "timestamp": "2025-05-25T06:37:52.288Z"
+    },
+    {
+      "id": "1748155075584",
+      "text": "Hey there! That's a fun question! Honestly, based on what we've talked about, I don't think you've actually *mentioned* your favorite food. We've touched on college life, kindness, and gaming... but not food!\n\nMaybe think about it in terms of effort vs. reward! What food gives you the *best* feeling for the *least* amount of effort to get (or make)? Is it something you'd grab quickly when you're chilling in your room after class, or maybe something you crave after a good round of BGMI?\n\nLet me know if you figure it out! I'm curious now! 😉\n",
+      "sender": "bot",
+      "timestamp": "2025-05-25T06:37:55.584Z"
+    },
+    {
+      "id": "1748160690537",
+      "text": "My favorite food is eggs.",
+      "sender": "user",
+      "timestamp": "2025-05-25T08:11:30.538Z"
+    },
+    {
+      "id": "1748160810003",
+      "text": "My favorite food is eggs.",
+      "sender": "user",
+      "timestamp": "2025-05-25T08:13:30.006Z"
+    },
+    {
+      "id": "1748160856572",
+      "text": "My favorite food is eggs.",
+      "sender": "user",
+      "timestamp": "2025-05-25T08:14:16.573Z"
+    },
+    {
+      "id": "1748161078675",
+      "text": "My favorite food is eggs.",
+      "sender": "user",
+      "timestamp": "2025-05-25T08:17:58.677Z"
+    },
+    {
+      "id": "1748161172547",
+      "text": "How’s my personality?",
+      "sender": "user",
+      "timestamp": "2025-05-25T08:19:32.548Z"
+    },
+    {
+      "id": "1748161331094",
+      "text": "How’s my personality?",
+      "sender": "user",
+      "timestamp": "2025-05-25T08:22:11.096Z"
+    },
+    {
+      "id": "1748161506153",
+      "text": "How’s my personality?",
+      "sender": "user",
+      "timestamp": "2025-05-25T08:25:06.154Z"
+    },
+    {
+      "id": "1748161636362",
+      "text": "How’s my personality?",
+      "sender": "user",
+      "timestamp": "2025-05-25T08:27:16.363Z"
+    },
+    {
+      "id": "1748161707928",
+      "text": "How’s my personality?",
+      "sender": "user",
+      "timestamp": "2025-05-25T08:28:27.929Z"
+    },
+    {
+      "id": "1748161711681",
+      "text": "Hey there! Based on what you've told me, you come across as a super chill and friendly person, someone who values kindness. You seem pretty pragmatic when it comes to decisions, always weighing up the effort versus the outcome – smart!\n\nIt also sounds like you're a typical college student, balancing studies with fun, and relying on good relationships with your mom and friends. You learn best by *doing*, which is awesome, and enjoy your downtime relaxing, exploring, and getting in some snooker.\n\nBig respect for valuing kindness and respect towards women; that's definitely a great quality to have. And, well, sounds like you're navigating the Bangalore college life coming from Hyderabad pretty well, going from class to room and back! Overall, you seem like a really grounded and likeable person! :)",
+      "sender": "bot",
+      "timestamp": "2025-05-25T08:28:31.682Z"
+    }
+  ],
+  "1748155670127": [
+    {
+      "id": "1748155674529",
+      "text": "Heyy",
+      "sender": "user",
+      "timestamp": "2025-05-25T06:47:54.530Z"
+    },
+    {
+      "id": "1748155677059",
+      "text": "Heyy! How's it going? Just trying to keep things friendly and positive, you know? What's up?\n",
+      "sender": "bot",
+      "timestamp": "2025-05-25T06:47:57.058Z"
+    },
+    {
+      "id": "1748155718998",
+      "text": "nothing much yaar, just at a 24 hr hackathon havent slept fully sleep deprived",
+      "sender": "user",
+      "timestamp": "2025-05-25T06:48:38.999Z"
+    },
+    {
+      "id": "1748155722807",
+      "text": "Hey yaar! That's rough! A 24-hour hackathon, huh? Must be intense! No sleep? Oof, I feel you! Hope you're seeing a good effort-to-outcome ratio there! Good luck, man! Get some sleep as soon as you can, maybe catch a power nap in the common area afterwards like playing snooker ? Rooting for you!\n",
+      "sender": "bot",
+      "timestamp": "2025-05-25T06:48:42.806Z"
+    },
+    {
+      "id": "1748155774183",
+      "text": "ah yes , and later i would have dosa - which is my favorite food",
+      "sender": "user",
+      "timestamp": "2025-05-25T06:49:34.184Z"
+    },
+    {
+      "id": "1748155777179",
+      "text": "Ah, nice! Dosa is the bomb, right? It's one of my favorites too! After a long day, just grabbing a dosa sounds like the perfect outcome for all that effort (going to class and back!). I'm jealous, enjoy it! Maybe I'll play some BGMI later and dream about dosas. ;)\n",
+      "sender": "bot",
+      "timestamp": "2025-05-25T06:49:37.179Z"
+    },
+    {
+      "id": "1748155795823",
+      "text": "yes yess lol - vese what all you do ",
+      "sender": "user",
+      "timestamp": "2025-05-25T06:49:55.823Z"
+    },
+    {
+      "id": "1748155798848",
+      "text": "Hey hey lol! That's a cool question! Well, generally it's room to class and class to room, you know, the college life! But in between, I like to chill with my mom or a friend. When I'm really bored, I play BGMI to pass the time before sleeping. How about you? What do you do?\n",
+      "sender": "bot",
+      "timestamp": "2025-05-25T06:49:58.848Z"
+    },
+    {
+      "id": "1748155819276",
+      "text": "okay and what was my favorite food",
+      "sender": "user",
+      "timestamp": "2025-05-25T06:50:19.277Z"
+    },
+    {
+      "id": "1748155822743",
+      "text": "Hey! Hmm, lemme think... You didn't mention a *specific* favorite food, but judging by your profile, you're probably a practical kinda guy, right? So, I'd guess it's something easy, accessible, and gets the job done! \n\nMaybe something you can quickly grab between class and room, or when you're gaming on BGMI? Like, maybe some quick biryani from a local Hyderabadi place (miss home!), or maybe just hostel mess food when you're too lazy? Something efficient for a college student in Bangalore, you know? Hehe. What do you think? Am I close?\n",
+      "sender": "bot",
+      "timestamp": "2025-05-25T06:50:22.744Z"
+    },
+    {
+      "id": "1748156002275",
+      "text": "vese my fav food is dosa , i love having dosa after a heavy day ",
+      "sender": "user",
+      "timestamp": "2025-05-25T06:53:22.276Z"
+    },
+    {
+      "id": "1748156005817",
+      "text": "Oh, that's awesome! Dosa after a long day sounds *amazing*, man. I totally get that. It's like, you put in the effort, and the outcome is that crispy, savory goodness. Perfect ratio! I'm in Bangalore too (well, sort of, just room-to-class-to-room life!), so I gotta find some good dosa spots around here. Maybe hit one up after class. What's your go-to dosa place? Always looking for recommendations!\n",
+      "sender": "bot",
+      "timestamp": "2025-05-25T06:53:25.817Z"
+    },
+    {
+      "id": "1748156036214",
+      "text": "have you tired vidhyarthi bhavan",
+      "sender": "user",
+      "timestamp": "2025-05-25T06:53:56.215Z"
+    },
+    {
+      "id": "1748156039403",
+      "text": "Hey! Vidyarthi Bhavan? Nah, haven't tried it yet. Is it any good? I'm always lookin' for new places to check out around Bangalore, especially if it's worth the effort, y'know? Maybe if it's close to my route from class to room I'll give it a shot sometime! What do you think? :)\n",
+      "sender": "bot",
+      "timestamp": "2025-05-25T06:53:59.403Z"
+    },
+    {
+      "id": "1748156049539",
+      "text": "its amazingg",
+      "sender": "user",
+      "timestamp": "2025-05-25T06:54:09.539Z"
+    },
+    {
+      "id": "1748156052472",
+      "text": "Hey! That's awesome to hear you think so! 😁 It's really great when things are amazing, right? Hope you're having a chill time and enjoying the vibes! Just like those moments when you're playing BGMI or hitting some snooker shots. Keep it up! 👍\n",
+      "sender": "bot",
+      "timestamp": "2025-05-25T06:54:12.472Z"
+    },
+    {
+      "id": "1748156065363",
+      "text": "and then whats my fav food?",
+      "sender": "user",
+      "timestamp": "2025-05-25T06:54:25.364Z"
+    },
+    {
+      "id": "1748156068383",
+      "text": "Hey there! So, you wanna know your fave food, huh? Hmm, let's think this through. Since we both kinda go for that effort/outcome ratio thing... what food gives you the most joy for the least amount of effort (like, ordering it, not cooking it!)... or maybe what food makes you happiest *after* a long day of classes in Bangalore? Is it something you get delivered to your room easy-peasy? Just thinking out loud here! Maybe something your mom makes? Or...is there some awesome food spot you found while roaming around in your free time? Let me know what comes to mind! 😉\n",
+      "sender": "bot",
+      "timestamp": "2025-05-25T06:54:28.383Z"
+    },
+    {
+      "id": "1748156279071",
+      "text": "no issues ill remind you that i told you its dosa and i love eating dosa after a heavy day",
+      "sender": "user",
+      "timestamp": "2025-05-25T06:57:59.071Z"
+    },
+    {
+      "id": "1748156281221",
+      "text": "Hey! No worries at all, mate! I totally appreciate you reminding me about the dosa. You know, after a long, tiring day, nothing beats a good dosa. It's like a perfect reward, you know? Just thinking about it makes me happy! Thanks for the reminder, really appreciate it! 😊\n",
+      "sender": "bot",
+      "timestamp": "2025-05-25T06:58:01.221Z"
+    },
+    {
+      "id": "1748156586527",
+      "text": "telling you again that i love eating dosa and its my fav food",
+      "sender": "user",
+      "timestamp": "2025-05-25T07:03:06.527Z"
+    },
+    {
+      "id": "1748156589375",
+      "text": "Hey! Just letting you know again, huh? Hehe, that's cool! I gotta say, I totally get that feeling when you just *love* something. Dosa sounds awesome, and if it's your fav, then it *must* be! Gotta make sure everyone knows, right? 😉 Makes me wonder if the effort of finding the best dosa is worth the tasty outcome... Probably is! Now I'm craving some myself! Haha! Anyway, hope you're having a great day, maybe grab another dosa? 😉\n",
+      "sender": "bot",
+      "timestamp": "2025-05-25T07:03:09.375Z"
+    },
+    {
+      "id": "1748156931867",
+      "text": "yes yess - we can have some dosa together , its my favorite food",
+      "sender": "user",
+      "timestamp": "2025-05-25T07:08:51.868Z"
+    },
+    {
+      "id": "1748156935287",
+      "text": "Hey hey! Dosa sounds awesome! For sure, let's grab some. It's one of my faves too! Thinkin' about the effort of walking to a good dosa place versus how happy I'll be eatin' one... totally worth it! What's your go-to dosa? Maybe we can find a place near college so it's not too much of a trek from room to class, you know? Let's plan it! 😄\n",
+      "sender": "bot",
+      "timestamp": "2025-05-25T07:08:55.287Z"
+    },
+    {
+      "id": "1748157041884",
+      "text": "and yayayay today after hackathon ill have dosa which is my fav ",
+      "sender": "user",
+      "timestamp": "2025-05-25T07:10:41.885Z"
+    },
+    {
+      "id": "1748157044326",
+      "text": "Hey hey! That's awesome! Hackathon + Dosa = Sounds like a perfect end to the day! I hope it was a great one. Enjoy your dosa, you earned it! What kind are you getting? I love masala dosa! :)\n",
+      "sender": "bot",
+      "timestamp": "2025-05-25T07:10:44.326Z"
+    },
+    {
+      "id": "1748157283066",
+      "text": "and also i like eating pani puri alot",
+      "sender": "user",
+      "timestamp": "2025-05-25T07:14:43.067Z"
+    },
+    {
+      "id": "1748157285580",
+      "text": "Oh, that's awesome! I love pani puri too! It's like the perfect little burst of flavor, right? So good! 😊 Just thinking about it makes me wanna go grab some. Maybe I'll find a good spot in Bangalore later. What's your favorite pani puri place? Always looking for recommendations! 😉\n",
+      "sender": "bot",
+      "timestamp": "2025-05-25T07:14:45.579Z"
+    },
+    {
+      "id": "1748157374171",
+      "text": "whats my favorite food",
+      "sender": "user",
+      "timestamp": "2025-05-25T07:16:14.172Z"
+    },
+    {
+      "id": "1748157376917",
+      "text": "Hey there! So, thinking about favorite foods... hmm... based on how I see things, it's probably something easily accessible and satisfying, right? Like, not too much effort for a good outcome. Plus, considering you're in a hostel in Bangalore, I'm guessing something maybe you can grab nearby or easily get in your room? Gotta maximize that study/BGMI time, haha! So, what's your favorite food? Tell me!\n",
+      "sender": "bot",
+      "timestamp": "2025-05-25T07:16:16.917Z"
+    },
+    {
+      "id": "1748158095816",
+      "text": "hello",
+      "sender": "user",
+      "timestamp": "2025-05-25T07:28:15.817Z"
+    },
+    {
+      "id": "1748158097978",
+      "text": "Hey! Hello there! 👋 How's it going? Just wanted to say hi and hopefully make a good first impression. What's up? :)\n",
+      "sender": "bot",
+      "timestamp": "2025-05-25T07:28:17.978Z"
+    }
+  ],
+  "1748158954069": [
+    {
+      "id": "1748158956545",
+      "text": "hello",
+      "sender": "user",
+      "timestamp": "2025-05-25T07:42:36.546Z"
+    },
+    {
+      "id": "1748158989517",
+      "text": "hello",
+      "sender": "user",
+      "timestamp": "2025-05-25T07:43:09.518Z"
+    },
+    {
+      "id": "1748158994991",
+      "text": "hello",
+      "sender": "user",
+      "timestamp": "2025-05-25T07:43:14.992Z"
+    },
+    {
+      "id": "1748159023113",
+      "text": "hi",
+      "sender": "user",
+      "timestamp": "2025-05-25T07:43:43.114Z"
+    },
+    {
+      "id": "1748160289176",
+      "text": "hello",
+      "sender": "user",
+      "timestamp": "2025-05-25T08:04:49.177Z"
+    },
+    {
+      "id": "1748160367632",
+      "text": "helo",
+      "sender": "user",
+      "timestamp": "2025-05-25T08:06:07.634Z"
+    },
+    {
+      "id": "1748160381803",
+      "text": "hi",
+      "sender": "user",
+      "timestamp": "2025-05-25T08:06:21.805Z"
+    },
+    {
+      "id": "1748161735879",
+      "text": "hello",
+      "sender": "user",
+      "timestamp": "2025-05-25T08:28:55.881Z"
+    },
+    {
+      "id": "1748161737757",
+      "text": "Hey there! Hello to you too! Hope you're having a good day! 😊",
+      "sender": "bot",
+      "timestamp": "2025-05-25T08:28:57.757Z"
+    }
   ]
 }

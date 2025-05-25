@@ -46,6 +46,27 @@ async function getPersonalityProfile(profileId) {
   }
 }
 
+async function updatePersonalityProfile(profileId, newAnswers) {
+  await ensureDataDir();
+
+  try {
+    const data = await fs.readFile(PROFILES_FILE, 'utf8');
+    const profiles = JSON.parse(data);
+    const index = profiles.findIndex(p => p.id === profileId);
+    if (index === -1) return null;
+
+    profiles[index].answers = {
+      ...profiles[index].answers,
+      ...newAnswers // merge with existing answers
+    };
+
+    await fs.writeFile(PROFILES_FILE, JSON.stringify(profiles, null, 2));
+    return profiles[index];
+  } catch {
+    return null;
+  }
+}
+
 // Save chat message
 async function saveChatMessage(profileId, message) {
   await ensureDataDir();
@@ -102,6 +123,7 @@ async function clearChatHistory(profileId) {
 module.exports = {
   savePersonalityProfile,
   getPersonalityProfile,
+  updatePersonalityProfile,
   saveChatMessage,
   getChatHistory,
   clearChatHistory

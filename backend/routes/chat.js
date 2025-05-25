@@ -47,7 +47,7 @@ router.post('/', async (req, res) => {
     let botResponse = "Sorry, I couldn’t generate a response right now.";
 
     try {
-      const model = genAI.getGenerativeModel({ model: "models/gemini-1.5-flash" });
+      const model = genAI.getGenerativeModel({ model: "models/gemini-2.0-flash" });
       const result = await model.generateContent([systemPrompt]);
       const response = await result.response;
       botResponse = response.text();

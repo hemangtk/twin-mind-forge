@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -56,6 +55,37 @@ const Onboarding = () => {
   const progress = ((currentQuestion + 1) / personalityQuestions.length) * 100;
   const currentAnswer = answers[personalityQuestions[currentQuestion].id] || "";
 
+  // SpeechRecognition setup
+  const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+
+  let recognition: any | null = null;
+
+  if (SpeechRecognition) {
+    recognition = new SpeechRecognition();
+    recognition.continuous = false; // Stop automatically when user stops speaking
+    recognition.interimResults = true; // Get partial results as user speaks
+    recognition.lang = "en-US"; // Language can be changed as needed
+
+    recognition.onresult = (event: any) => {
+      let transcript = "";
+      for (let i = event.resultIndex; i < event.results.length; i++) {
+        transcript += event.results[i][0].transcript;
+      }
+      // Update the current answer with the transcript
+      handleAnswerChange(transcript);
+    };
+
+    recognition.onerror = (event: any) => {
+      toast.error(`Speech recognition error: ${event.error}`);
+      setIsRecording(false);
+      recognition?.stop();
+    };
+
+    recognition.onend = () => {
+      setIsRecording(false);
+    };
+  }
+
   const handleAnswerChange = (value: string) => {
     setAnswers(prev => ({
       ...prev,
@@ -83,51 +113,58 @@ const Onboarding = () => {
   };
 
   const handleVoiceToggle = () => {
-    setIsRecording(!isRecording);
-    if (!isRecording) {
-      toast.info("Voice input not implemented in this demo");
-    }
-  };
-
-const handleSubmit = async () => {
-  setIsSubmitting(true);
-
-  try {
-    const formattedAnswers = Object.fromEntries(
-      Object.entries(answers).map(([key, value]) => [`q${key}`, value])
-    );
-
-    const response = await fetch("http://localhost:3001/api/personality", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ answers: formattedAnswers })
-    });
-
-    console.log("Raw backend response:", response);
-    const data = await response.json();
-    const profileToStore = {
-      id: data.profileId,
-      answers: formattedAnswers
-    };
-    localStorage.setItem("personalityProfile", JSON.stringify(profileToStore));
-    console.log("Saved to localStorage:", profileToStore);
-
-    console.log("Parsed data:", data);
-
-    if (!response.ok || !data.success || !data.profileId) {
-      toast.error("Failed to save profile.");
+    if (!recognition) {
+      toast.error("Speech Recognition API not supported in this browser.");
       return;
     }
 
-    navigate("/chat");
-  } catch (error) {
-    console.error("Error during profile submission:", error);
-    toast.error("Something went wrong.");
-  } finally {
-    setIsSubmitting(false);
-  }
-};
+    if (isRecording) {
+      recognition.stop();
+      setIsRecording(false);
+    } else {
+      recognition.start();
+      setIsRecording(true);
+    }
+  };
 
+  const handleSubmit = async () => {
+    setIsSubmitting(true);
+
+    try {
+      const formattedAnswers = Object.fromEntries(
+        Object.entries(answers).map(([key, value]) => [`q${key}`, value])
+      );
+
+      const response = await fetch("http://localhost:3001/api/personality", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ answers: formattedAnswers })
+      });
+
+      console.log("Raw backend response:", response);
+      const data = await response.json();
+      const profileToStore = {
+        id: data.profileId,
+        answers: formattedAnswers
+      };
+      localStorage.setItem("personalityProfile", JSON.stringify(profileToStore));
+      console.log("Saved to localStorage:", profileToStore);
+
+      console.log("Parsed data:", data);
+
+      if (!response.ok || !data.success || !data.profileId) {
+        toast.error("Failed to save profile.");
+        return;
+      }
+
+      navigate("/chat");
+    } catch (error) {
+      console.error("Error during profile submission:", error);
+      toast.error("Something went wrong.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   const currentQuestionData = personalityQuestions[currentQuestion];
 
@@ -205,7 +242,7 @@ const handleSubmit = async () => {
               {isRecording && (
                 <div className="flex items-center space-x-2 text-red-600">
                   <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
-                  <span className="text-sm">Recording... (Demo mode)</span>
+                  <span className="text-sm">Recording...</span>
                 </div>
               )}
             </div>
